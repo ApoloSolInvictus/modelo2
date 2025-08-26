@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Luka - Estilo y Tradición</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-section {
+            background-image: url('https://placehold.co/1200x800/2d3748/ffffff?text=Barber%C3%ADa+Luka');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-black tracking-wider">BARBERÍA LUKA</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#servicios" class="hover:text-red-500 transition-colors">Servicios</a>
+                <a href="#galeria" class="hover:text-red-500 transition-colors">Galería</a>
+                <a href="#contacto" class="hover:text-red-500 transition-colors">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section h-screen flex items-center justify-center text-white text-center">
+            <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+                <h1 class="text-5xl md:text-7xl font-black mb-4">ESTILO Y TRADICIÓN</h1>
+                <p class="text-xl md:text-2xl mb-8">Más que un corte, una experiencia.</p>
+                <a href="#contacto" class="bg-red-600 font-bold py-3 px-10 rounded-sm hover:bg-red-700 transition-colors text-lg">RESERVAR</a>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-black text-center mb-12">NUESTROS SERVICIOS</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 shadow-xl">
+                    <div class="flex justify-between items-end border-b-2 border-dashed border-gray-300 py-4">
+                        <span class="text-xl font-bold">Corte Clásico</span><span class="text-xl font-bold text-red-600">$20</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-dashed border-gray-300 py-4">
+                        <span class="text-xl font-bold">Arreglo de Barba</span><span class="text-xl font-bold text-red-600">$15</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-dashed border-gray-300 py-4">
+                        <span class="text-xl font-bold">Corte y Barba</span><span class="text-xl font-bold text-red-600">$30</span>
+                    </div>
+                    <div class="flex justify-between items-end py-4">
+                        <span class="text-xl font-bold">Ritual de Afeitado Clásico</span><span class="text-xl font-bold text-red-600">$25</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-black text-center mb-12">GALERÍA</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+1" alt="Corte de cabello 1" class="rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+2" alt="Corte de cabello 2" class="rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+3" alt="Corte de cabello 3" class="rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+4" alt="Corte de cabello 4" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-black mb-6">CONTACTO Y RESERVAS</h2>
+                    <p class="mb-4">Teléfono: <a href="tel:88889999" class="text-red-500">8888-9999</a></p>
+                    <p class="mb-4">Dirección: San Pedro, 100mts Este de la Iglesia</p>
+                    <p>Horario: Lunes a Sábado, 9am - 7pm</p>
+                </div>
+                <form class="w-full">
+                    <div class="mb-4">
+                        <label for="name" class="block mb-2">Nombre</label>
+                        <input type="text" id="name" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2">Email</label>
+                        <input type="email" id="email" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block mb-2">Mensaje</label>
+                        <textarea id="message" rows="4" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 font-bold py-3 px-10 rounded-sm hover:bg-red-700 transition-colors">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Barbería Luka | Sitio web por <a href="https://profcr.com" target="_blank" class="text-red-500">ProfCR.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
