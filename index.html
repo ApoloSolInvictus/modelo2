@@ -52,6 +52,10 @@
             width: 100%;
             z-index: 10;
         }
+        /* Estilo para el Date Picker en modo oscuro */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -126,19 +130,28 @@
                     <p class="mb-4">Dirección: San Pedro, 100mts Este de la Iglesia</p>
                     <p>Horario: Lunes a Sábado, 9am - 7pm</p>
                 </div>
-                <!-- Formulario de Booking -->
-                <form class="w-full space-y-6">
+                <!-- Formulario de Booking Funcional -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="w-full space-y-6">
+                    <!-- Reemplaza con tu Access Key de Web3Forms -->
+                    <input type="hidden" name="access_key" value="REEMPLAZA_CON_TU_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="Nueva Solicitud de Cita - Barbería Luka">
+                    <input type="hidden" name="from_name" value="Sitio Web Barbería Luka">
+
                     <div>
                         <label for="name" class="block mb-2 text-sm font-bold">Nombre Completo</label>
-                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                        <input type="text" id="name" name="name" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
                     </div>
                      <div>
                         <label for="email" class="block mb-2 text-sm font-bold">Email</label>
-                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                        <input type="email" id="email" name="email" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                    </div>
+                     <div>
+                        <label for="date" class="block mb-2 text-sm font-bold">Fecha del Servicio</label>
+                        <input type="date" id="date" name="fecha" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
                     </div>
                     <div>
                         <label for="service" class="block mb-2 text-sm font-bold">Servicio a solicitar</label>
-                        <select id="service" name="service" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500 appearance-none">
+                        <select id="service" name="service" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500 appearance-none">
                             <option>Corte Clásico</option>
                             <option>Arreglo de Barba</option>
                             <option>Corte y Barba</option>
