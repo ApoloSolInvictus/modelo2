@@ -71,7 +71,7 @@
     <main>
         <!-- Hero Section -->
         <section id="inicio" class="hero-section">
-            <img src="images/luka1.gif" alt="Ambiente de Barbería Luka" class="hero-background-gif">
+            <img src="images/luka.gif" alt="Ambiente de Barbería Luka" class="hero-background-gif">
             <div class="hero-overlay"></div>
             
             <div class="hero-content p-6">
@@ -109,37 +109,73 @@
                 <h2 class="text-4xl font-black text-center mb-12">GALERÍA DE ESTILOS</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <!-- Cada imagen es un link a una página de servicio -->
-                    <a href="corte-clasico.html"><img src="images/1.png" alt="Corte de cabello Clásico" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
-                    <a href="arreglo-barba.html"><img src="images/2.png" alt="Arreglo de Barba" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
-                    <a href="corte-y-barba.html"><img src="images/3.png" alt="Servicio de Corte y Barba" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
-                    <a href="afeitado-clasico.html"><img src="images/4.png" alt="Afeitado Clásico" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
+                    <a href="corte-clasico.html"><img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+Cl%C3%A1sico" alt="Corte de cabello Clásico" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
+                    <a href="arreglo-barba.html"><img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Arreglo+de+Barba" alt="Arreglo de Barba" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
+                    <a href="corte-y-barba.html"><img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Corte+y+Barba" alt="Servicio de Corte y Barba" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
+                    <a href="afeitado-clasico.html"><img src="https://placehold.co/400x400/e2e8f0/2d3748?text=Afeitado" alt="Afeitado Clásico" class="rounded-lg shadow-md transition-transform hover:scale-105"></a>
                 </div>
             </div>
         </section>
 
-        <!-- Contacto -->
+        <!-- Contacto / Booking Section -->
         <section id="contacto" class="py-20 bg-gray-900 text-white">
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl font-black mb-6">CONTACTO Y RESERVAS</h2>
+                    <h2 class="text-4xl font-black mb-6">SOLICITA TU CITA</h2>
                     <p class="mb-4">Teléfono: <a href="tel:88889999" class="text-red-500 hover:underline">8888-9999</a></p>
                     <p class="mb-4">Dirección: San Pedro, 100mts Este de la Iglesia</p>
                     <p>Horario: Lunes a Sábado, 9am - 7pm</p>
                 </div>
-                <form class="w-full">
-                    <div class="mb-4">
-                        <label for="name" class="block mb-2">Nombre</label>
-                        <input type="text" id="name" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                <!-- Formulario de Booking -->
+                <form class="w-full space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-bold">Nombre Completo</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
                     </div>
-                    <div class="mb-4">
-                        <label for="email" class="block mb-2">Email</label>
-                        <input type="email" id="email" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
+                     <div>
+                        <label for="email" class="block mb-2 text-sm font-bold">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500">
                     </div>
-                    <div class="mb-4">
-                        <label for="message" class="block mb-2">Mensaje</label>
-                        <textarea id="message" rows="4" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500"></textarea>
+                    <div>
+                        <label for="service" class="block mb-2 text-sm font-bold">Servicio a solicitar</label>
+                        <select id="service" name="service" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:border-red-500 appearance-none">
+                            <option>Corte Clásico</option>
+                            <option>Arreglo de Barba</option>
+                            <option>Corte y Barba</option>
+                            <option>Ritual de Afeitado Clásico</option>
+                        </select>
                     </div>
-                    <button type="submit" class="w-full bg-red-600 font-bold py-3 px-10 rounded-sm hover:bg-red-700 transition-colors">Enviar Mensaje</button>
+                    <fieldset>
+                        <legend class="block mb-2 text-sm font-bold">Horario de Preferencia</legend>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <input type="radio" id="horario-manana" name="horario" value="manana" class="hidden peer">
+                                <label for="horario-manana" class="block w-full text-center p-3 bg-gray-800 border border-gray-700 rounded-sm cursor-pointer peer-checked:bg-red-600 peer-checked:border-red-500">Mañana</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="horario-tarde" name="horario" value="tarde" class="hidden peer">
+                                <label for="horario-tarde" class="block w-full text-center p-3 bg-gray-800 border border-gray-700 rounded-sm cursor-pointer peer-checked:bg-red-600 peer-checked:border-red-500">Tarde</label>
+                            </div>
+                             <div>
+                                <input type="radio" id="horario-noche" name="horario" value="noche" class="hidden peer">
+                                <label for="horario-noche" class="block w-full text-center p-3 bg-gray-800 border border-gray-700 rounded-sm cursor-pointer peer-checked:bg-red-600 peer-checked:border-red-500">Noche</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                     <fieldset>
+                        <legend class="block mb-2 text-sm font-bold">Método de Pago</legend>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <input type="radio" id="pago-sinpe" name="pago" value="sinpe" class="hidden peer">
+                                <label for="pago-sinpe" class="block w-full text-center p-3 bg-gray-800 border border-gray-700 rounded-sm cursor-pointer peer-checked:bg-red-600 peer-checked:border-red-500">SINPE Móvil</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="pago-efectivo" name="pago" value="efectivo" class="hidden peer">
+                                <label for="pago-efectivo" class="block w-full text-center p-3 bg-gray-800 border border-gray-700 rounded-sm cursor-pointer peer-checked:bg-red-600 peer-checked:border-red-500">Efectivo</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="w-full bg-red-600 font-bold py-3 px-10 rounded-sm hover:bg-red-700 transition-colors">Solicitar Cita</button>
                 </form>
             </div>
         </section>
@@ -153,6 +189,4 @@
 
 </body>
 </html>
-
-
 
